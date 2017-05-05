@@ -1,0 +1,46 @@
+[
+  {
+    "name": "Name",
+    "identifier": "name",
+    "renderType": "string",
+    "options": {
+      "validation": {
+        "maxlength": 255
+      }
+    }
+  },
+  {
+    "name": "Status",
+    "identifier": "status",
+    "renderType": "options-checkbox",
+    "options": {
+      "items": [
+        { "name": "Open", "value": "open" },
+        { "name": "In progress", "value": "inprogress" },
+        { "name": "Closed", "value": "closed" }
+      ]
+    }
+  },
+  {
+    "name": "Type",
+    "identifier": "type",
+    "renderType": "options-checkbox",
+    "option": {
+      "items": [
+        { "name": "Installation", "value": "installation" },
+        { "name": "Maintenance", "value": "maintenance" },
+        { "name": "Failure", "value": "failure" }
+      ]
+    }
+  },
+  {
+    "name": "Start date",
+    "identifier": "date-start",
+    "renderType": "datetime"
+  },
+  {
+    "name": "End date",
+    "identifier": "date-end",
+    "renderType": "datetime"
+  }
+]
