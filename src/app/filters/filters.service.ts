@@ -13,4 +13,12 @@ export class FiltersService {
       .map((response: Response) => response.json());
   }
 
+  // After loading all the filters I want to add a value property to represent the filter model value.
+  standardizeFilters(filters: any[]) {
+    return filters.map((filter) => {
+      filter.value = null;
+      return filter;
+    });
+  }
+
 }

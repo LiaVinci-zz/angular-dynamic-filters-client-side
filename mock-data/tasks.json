@@ -1,0 +1,42 @@
+[
+  {
+    "id": "uniqwo1",
+    "name": "WO-0001",
+    "status": "open",
+    "type": "installation",
+    "startdate": "22-04-2016 13:00:00",
+    "enddate": "22-04-2016 14:00:00",
+    "color": "red",
+    "description": "Install new KoelKast SF-123"
+  },
+  {
+    "id": "uniqwo2",
+    "name": "WO-0002",
+    "status": "inprogress",
+    "type": "maintenance",
+    "startdate": "24-04-2016 13:00:00",
+    "enddate": "24-04-2016 14:00:00",
+    "color": "green",
+    "description": "Check freon on split-system"
+  },
+  {
+    "id": "uniqwo3",
+    "name": "WO-0003",
+    "status": "closed",
+    "type": "maintenance",
+    "startdate": "24-04-2016 18:00:00",
+    "enddate": "24-04-2016 19:00:00",
+    "color": "purple",
+    "description": "Fix something"
+  },
+  {
+    "id": "uniqwo4",
+    "name": "WO-0004",
+    "status": "inprogress",
+    "type": "failure",
+    "startdate": "24-04-2016 20:00:00",
+    "enddate": "24-04-2016 21:00:00",
+    "color": "red",
+    "description": "Fix something that does not work"
+  }
+]

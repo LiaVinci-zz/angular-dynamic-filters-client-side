@@ -22,10 +22,24 @@
     }
   },
   {
+    "name": "Color",
+    "identifier": "color",
+    "renderType": "options-checkbox",
+    "options": {
+      "items": [
+        { "name": "Blue", "value": "blue" },
+        { "name": "Purple", "value": "purple" },
+        { "name": "Black", "value": "black" },
+        { "name": "Green", "value": "green" },
+        { "name": "Red", "value": "red" }
+      ]
+    }
+  },
+  {
     "name": "Type",
     "identifier": "type",
-    "renderType": "options-checkbox",
-    "option": {
+    "renderType": "options-radio",
+    "options": {
       "items": [
         { "name": "Installation", "value": "installation" },
         { "name": "Maintenance", "value": "maintenance" },
@@ -36,11 +50,13 @@
   {
     "name": "Start date",
     "identifier": "date-start",
-    "renderType": "datetime"
+    "renderType": "date",
+    "options": {}
   },
   {
     "name": "End date",
     "identifier": "date-end",
-    "renderType": "datetime"
+    "renderType": "date",
+    "options": {}
   }
 ]

@@ -1,5 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-import { FiltersService } from "./filters.service";
+import {Component, OnInit, ViewContainerRef, ComponentFactoryResolver, ViewChild, ComponentRef, Type} from '@angular/core';
+import {FiltersService} from "./filters.service";
 
 @Component({
   selector: 'filters',
@@ -9,20 +9,35 @@ import { FiltersService } from "./filters.service";
 export class FiltersComponent implements OnInit {
 
   filters: any[] = [];
-  date: Date = new Date();
+  currentFilter: any = {};
 
-  constructor(private filtersService: FiltersService) { }
+  constructor(private filtersService: FiltersService, private componentFactoryResolver: ComponentFactoryResolver) {
+  }
 
   ngOnInit() {
     this.getFilters();
   }
 
+  @ViewChild('filterOverlay', {read: ViewContainerRef}) filterOverlay: ViewContainerRef;
+
   getFilters(): void {
     this.filtersService.getFilters()
       .subscribe(
-        res => console.log(res),
+        res => this.filters = this.filtersService.standardizeFilters(res),
         err => console.log(err)
       );
   }
+
+  toggleFilterOverlay(element, event, filter): void {
+    this.currentFilter = filter;
+    element.toggle(event);
+  }
+
+  // private loadFilterComponent(comp: Type<Component>) {
+  //   let factory = this.componentFactoryResolver.resolveComponentFactory(comp);
+  //   let componentRef = this.filterOverlay.createComponent(factory);
+  //   // //TODO: fix the type definition
+  //   (componentRef.instance as any).filterOptions = filter.options;
+  // }
 
 }
