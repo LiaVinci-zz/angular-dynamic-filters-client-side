@@ -1,13 +1,13 @@
 import {Pipe, PipeTransform} from '@angular/core';
 
 @Pipe({
-  name: 'myfilter',
+  name: 'tasksfilters',
   pure: false
 })
-export class MyFilterPipe implements PipeTransform {
-  transform(items: any[], filter: Object): any {
+export class TasksFiltersPipe implements PipeTransform {
+  transform(tasks: any[], filter: Object): any {
     if (filter) {
-      return items.filter((item) => {
+      return tasks.filter((item) => {
         for (let key in filter) {
           if (filter[key].renderType === 'string' && !this.filterByIncludes(item[key], filter[key].value))
             return false;
@@ -26,11 +26,11 @@ export class MyFilterPipe implements PipeTransform {
         return true;
       });
     }
-    return items;
+    return tasks;
   }
 
   filterByIncludes(itemValue: string, stringValue: string) {
-    return itemValue.includes(stringValue);
+    return itemValue.toLowerCase().includes(stringValue.toLowerCase());
   }
 
   filterByOptions(itemValue: any, checkboxOptions: any) {

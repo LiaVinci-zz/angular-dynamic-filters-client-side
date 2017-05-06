@@ -21,7 +21,6 @@ export class TasksComponent implements OnInit {
         delete this.filters[newVal.identifier];
       else
         this.filters[newVal.identifier] = newVal.value;
-      console.log(this.filters)
     });
   }
 
@@ -29,7 +28,7 @@ export class TasksComponent implements OnInit {
     this.tasksService.getTasks()
       .subscribe(
         res => this.tasks = res,
-        err => console.log(err)
+        err => console.error(err)
       );
   }
 }

@@ -40,7 +40,7 @@ export class FiltersComponent implements OnInit {
     this.filtersService.getFilters()
       .subscribe(
         res => this.filters = this.filtersService.converIdentifierToComponent(res),
-        err => console.log(err)
+        err => console.error(err)
       );
   }
 

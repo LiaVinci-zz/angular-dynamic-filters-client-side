@@ -1,6 +1,6 @@
 <header class="filter-header">{{ filter.name }}</header>
 <div class="ui-g">
-  <div class="ui-g-12" *ngFor="let item of filter.options.items">
+  <div class="ui-g-12 single-checkbox" *ngFor="let item of filter.options.items">
     <p-checkbox name="checkboxItem" class="filter-header" value="{{ item.value }}" label="{{ item.name }}" [(ngModel)]="filter.value" (onChange)="onChange()"></p-checkbox>
   </div>
 </div>

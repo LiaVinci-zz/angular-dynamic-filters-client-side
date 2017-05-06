@@ -15,7 +15,7 @@ import { FiltersService } from './filters/filters.service';
 import { TasksService } from "./tasks/tasks.service";
 
 // Pipes
-import { MyFilterPipe } from './tasks/tasks.pipe';
+import { TasksFiltersPipe } from './tasks/tasks.pipe';
 
 // Components
 import { AppComponent } from './app.component';
@@ -38,7 +38,7 @@ import { TaskComponent } from './tasks/task/task.component';
     OptionsRadioComponent,
     DateComponent,
     TaskComponent,
-    MyFilterPipe
+    TasksFiltersPipe
   ],
   imports: [
     BrowserModule,
