@@ -1,3 +1,6 @@
-<p>
-  options-checkbox works!
-</p>
+<h3 class="first">{{ filter.name }}</h3>
+<div class="ui-g">
+  <div class="ui-g-12" *ngFor="let item of filter.options.items">
+    <p-checkbox name="checkboxItem" value="{{ item.value }}" label="{{ item.name }}" [(ngModel)]="filter.value" (onChange)="onChange()"></p-checkbox>
+  </div>
+</div>

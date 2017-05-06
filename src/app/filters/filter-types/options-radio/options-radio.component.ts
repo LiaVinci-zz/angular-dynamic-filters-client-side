@@ -1,4 +1,5 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { FiltersService } from "../../filters.service";
 
 @Component({
   selector: 'filter-radio',
@@ -7,12 +8,14 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class OptionsRadioComponent implements OnInit {
 
-  @Input() options: any;
-  @Input() value: any;
+  filter: any;
 
-  constructor() { }
+  constructor(private filtersService: FiltersService) { }
 
   ngOnInit() {
   }
 
+  onChange() {
+    this.filtersService.applyFilter(this.filter.identifier, {value: this.filter.value, renderType: this.filter.renderType});
+  }
 }

@@ -4,8 +4,10 @@
     "name": "WO-0001",
     "status": "open",
     "type": "installation",
-    "startdate": "22-04-2016 13:00:00",
-    "enddate": "22-04-2016 14:00:00",
+    "date": {
+      "start": "Sat May 06 2017 15:35:46 GMT+0300 (IDT)",
+      "end": "Sat May 06 2017 15:40:46 GMT+0300 (IDT)"
+    },
     "color": "red",
     "description": "Install new KoelKast SF-123"
   },
@@ -14,8 +16,10 @@
     "name": "WO-0002",
     "status": "inprogress",
     "type": "maintenance",
-    "startdate": "24-04-2016 13:00:00",
-    "enddate": "24-04-2016 14:00:00",
+    "date": {
+      "start": "Sat May 06 2017 15:25:46 GMT+0300 (IDT)",
+      "end": "Sat May 06 2017 15:30:46 GMT+0300 (IDT)"
+    },
     "color": "green",
     "description": "Check freon on split-system"
   },
@@ -24,8 +28,10 @@
     "name": "WO-0003",
     "status": "closed",
     "type": "maintenance",
-    "startdate": "24-04-2016 18:00:00",
-    "enddate": "24-04-2016 19:00:00",
+    "date": {
+      "start": "Sat May 04 2017 15:15:46 GMT+0300 (IDT)",
+      "end": "Sat May 04 2017 15:20:46 GMT+0300 (IDT)"
+    },
     "color": "purple",
     "description": "Fix something"
   },
@@ -34,8 +40,10 @@
     "name": "WO-0004",
     "status": "inprogress",
     "type": "failure",
-    "startdate": "24-04-2016 20:00:00",
-    "enddate": "24-04-2016 21:00:00",
+    "date": {
+      "start": "Sat May 06 2017 10:35:46 GMT+0300 (IDT)",
+      "end": "Sat May 06 2017 11:35:46 GMT+0300 (IDT)"
+    },
     "color": "red",
     "description": "Fix something that does not work"
   }

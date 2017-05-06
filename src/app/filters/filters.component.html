@@ -1,8 +1,5 @@
 <button type="text" pButton label="{{ filter.name }}" (click)="toggleFilterOverlay(filterOverlay, $event, filter)" *ngFor="let filter of filters"></button>
 
-<p-overlayPanel #filterOverlay [ngSwitch]="currentFilter.renderType">
-  <filter-date *ngSwitchCase="'date'" [(value)]="currentFilter.value" [options]="currentFilter.options"></filter-date>
-  <filter-checkbox *ngSwitchCase="'options-checkbox'" [(value)]="currentFilter.value" [options]="currentFilter.options"></filter-checkbox>
-  <filter-radio *ngSwitchCase="'options-radio'" [(value)]="currentFilter.value" [options]="currentFilter.options"></filter-radio>
-  <filter-string *ngSwitchCase="'string'"  [(value)]="currentFilter.value" [options]="currentFilter.options"></filter-string>
+<p-overlayPanel #filterOverlay>
+  <div #filterComponent></div>
 </p-overlayPanel>

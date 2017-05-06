@@ -48,14 +48,8 @@
     }
   },
   {
-    "name": "Start date",
-    "identifier": "date-start",
-    "renderType": "date",
-    "options": {}
-  },
-  {
-    "name": "End date",
-    "identifier": "date-end",
+    "name": "Date",
+    "identifier": "date",
     "renderType": "date",
     "options": {}
   }

@@ -1,43 +1,60 @@
-import {Component, OnInit, ViewContainerRef, ComponentFactoryResolver, ViewChild, ComponentRef, Type} from '@angular/core';
+import {Component, OnInit, ViewContainerRef, ComponentFactoryResolver, ViewChild} from '@angular/core';
 import {FiltersService} from "./filters.service";
+import {DateComponent} from "./filter-types/date/date.component";
+import {StringComponent} from "./filter-types/string/string.component";
+import {OptionsCheckboxComponent} from "./filter-types/options-checkbox/options-checkbox.component";
+import {OptionsRadioComponent} from "./filter-types/options-radio/options-radio.component";
 
 @Component({
   selector: 'filters',
   templateUrl: './filters.component.html',
-  styleUrls: ['./filters.component.css']
+  styleUrls: ['./filters.component.css'],
+  entryComponents: [
+    DateComponent,
+    StringComponent,
+    OptionsCheckboxComponent,
+    OptionsRadioComponent
+  ]
 })
 export class FiltersComponent implements OnInit {
 
   filters: any[] = [];
   currentFilter: any = {};
+  filterComponents = {
+    StringComponent: StringComponent,
+    DateComponent: DateComponent,
+    OptionsCheckboxComponent: OptionsCheckboxComponent,
+    OptionsRadioComponent: OptionsRadioComponent
+  };
 
-  constructor(private filtersService: FiltersService, private componentFactoryResolver: ComponentFactoryResolver) {
+  constructor(private filtersService: FiltersService, private _componentFactoryResolver: ComponentFactoryResolver) {
   }
 
   ngOnInit() {
     this.getFilters();
   }
 
-  @ViewChild('filterOverlay', {read: ViewContainerRef}) filterOverlay: ViewContainerRef;
+  @ViewChild('filterComponent', {read: ViewContainerRef}) filterComponent: ViewContainerRef;
 
-  getFilters(): void {
+  getFilters() {
     this.filtersService.getFilters()
       .subscribe(
-        res => this.filters = this.filtersService.standardizeFilters(res),
+        res => this.filters = this.filtersService.converIdentifierToComponent(res),
         err => console.log(err)
       );
   }
 
   toggleFilterOverlay(element, event, filter): void {
     this.currentFilter = filter;
+    this.loadFilterComponent(filter);
     element.toggle(event);
   }
 
-  // private loadFilterComponent(comp: Type<Component>) {
-  //   let factory = this.componentFactoryResolver.resolveComponentFactory(comp);
-  //   let componentRef = this.filterOverlay.createComponent(factory);
-  //   // //TODO: fix the type definition
-  //   (componentRef.instance as any).filterOptions = filter.options;
-  // }
+  loadFilterComponent(filter) {
+    this.filterComponent.clear();
+    let componentFactory = this._componentFactoryResolver.resolveComponentFactory(this.filterComponents[filter.component]);
+    let componentRef = this.filterComponent.createComponent(componentFactory);
+    (componentRef.instance as any).filter = filter;
+  }
 
 }

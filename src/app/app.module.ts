@@ -7,10 +7,15 @@ import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 //PrimeNg Modules
 import { CalendarModule } from 'primeng/primeng';
 import { OverlayPanelModule } from "primeng/components/overlaypanel/overlaypanel";
+import { CheckboxModule } from "primeng/components/checkbox/checkbox";
+import { RadioButtonModule } from "primeng/components/radiobutton/radiobutton";
 
 // Services
 import { FiltersService } from './filters/filters.service';
 import { TasksService } from "./tasks/tasks.service";
+
+// Pipes
+import { MyFilterPipe } from './tasks/myfilter.pipe';
 
 // Components
 import { AppComponent } from './app.component';
@@ -32,7 +37,8 @@ import { TaskComponent } from './tasks/task/task.component';
     OptionsCheckboxComponent,
     OptionsRadioComponent,
     DateComponent,
-    TaskComponent
+    TaskComponent,
+    MyFilterPipe
   ],
   imports: [
     BrowserModule,
@@ -40,7 +46,9 @@ import { TaskComponent } from './tasks/task/task.component';
     FormsModule,
     HttpModule,
     CalendarModule,
-    OverlayPanelModule
+    OverlayPanelModule,
+    CheckboxModule,
+    RadioButtonModule
   ],
   providers: [
     FiltersService,

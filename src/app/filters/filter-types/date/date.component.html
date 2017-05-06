@@ -1,3 +1,9 @@
-<p>
-  date works!
-</p>
+<h3 class="first">{{ filter.name }}</h3>
+<div class="ui-g">
+  <div class="ui-g-12">
+    <p-calendar [(ngModel)]="filter.value.start" [showIcon]="true" [showTime]="true" (onSelect)="onChange()"></p-calendar>
+  </div>
+  <div class="ui-g-12">
+    <p-calendar [(ngModel)]="filter.value.end" [showIcon]="true" [showTime]="true" (onSelect)="onChange()"></p-calendar>
+  </div>
+</div>
