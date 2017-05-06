@@ -2,49 +2,169 @@
   {
     "id": "uniqwo1",
     "name": "WO-0001",
-    "status": "open",
-    "type": "installation",
+    "status": "Open",
+    "type": "Installation",
     "date": {
       "start": "Sat May 06 2017 15:35:46 GMT+0300 (IDT)",
       "end": "Sat May 06 2017 15:40:46 GMT+0300 (IDT)"
     },
     "color": "red",
-    "description": "Install new KoelKast SF-123"
+    "description": {
+      "customer": {
+        "name": "Markus",
+        "address": "Meijendel 26, 1941 Beverwijk"
+      },
+      "installation": "Suntech 245Wp - 2151",
+      "contract": "Full Service 24/7",
+      "message": "Solar panel doesn't work.",
+      "internal_comment": "Check again if the stretching line is in place."
+    }
   },
   {
     "id": "uniqwo2",
-    "name": "WO-0002",
-    "status": "inprogress",
-    "type": "maintenance",
+    "name": "WO-0001",
+    "status": "Open",
+    "type": "Failure",
     "date": {
-      "start": "Sat May 06 2017 15:25:46 GMT+0300 (IDT)",
-      "end": "Sat May 06 2017 15:30:46 GMT+0300 (IDT)"
+      "start": "Sat May 06 2017 15:35:46 GMT+0300 (IDT)",
+      "end": "Sat May 06 2017 15:40:46 GMT+0300 (IDT)"
     },
     "color": "green",
-    "description": "Check freon on split-system"
+    "description": {
+      "customer": {
+        "name": "Barend",
+        "address": "Pratoriustraat 26, 1941 Amsterdam"
+      },
+      "installation": "Suntech 245Wp - 2151",
+      "contract": "Full Service 24/7",
+      "message": "Solar panel doesn't work.",
+      "internal_comment": "Check again if the stretching line is in place."
+    }
   },
   {
     "id": "uniqwo3",
-    "name": "WO-0003",
-    "status": "closed",
-    "type": "maintenance",
+    "name": "WO-0001",
+    "status": "Open",
+    "type": "Installation",
     "date": {
-      "start": "Sat May 04 2017 15:15:46 GMT+0300 (IDT)",
-      "end": "Sat May 04 2017 15:20:46 GMT+0300 (IDT)"
+      "start": "Sat May 06 2017 15:35:46 GMT+0300 (IDT)",
+      "end": "Sat May 06 2017 15:40:46 GMT+0300 (IDT)"
     },
     "color": "purple",
-    "description": "Fix something"
+    "description": {
+      "customer": {
+        "name": "Magna",
+        "address": "Meijendel 26, 1941 Beverwijk"
+      },
+      "installation": "Suntech 245Wp - 2151",
+      "contract": "Full Service 24/7",
+      "message": "Solar panel doesn't work.",
+      "internal_comment": "Check again if the stretching line is in place."
+    }
   },
   {
     "id": "uniqwo4",
-    "name": "WO-0004",
-    "status": "inprogress",
-    "type": "failure",
+    "name": "WO-0001",
+    "status": "Closed",
+    "type": "Maintenance",
     "date": {
-      "start": "Sat May 06 2017 10:35:46 GMT+0300 (IDT)",
-      "end": "Sat May 06 2017 11:35:46 GMT+0300 (IDT)"
+      "start": "Sat May 06 2017 15:35:46 GMT+0300 (IDT)",
+      "end": "Sat May 06 2017 15:40:46 GMT+0300 (IDT)"
+    },
+    "color": "blue",
+    "description": {
+      "customer": {
+        "name": "Magna",
+        "address": "Meijendel 26, 1941 Beverwijk"
+      },
+      "installation": "Suntech 245Wp - 2151",
+      "contract": "Full Service 24/7",
+      "message": "Solar panel doesn't work.",
+      "internal_comment": "Check again if the stretching line is in place."
+    }
+  },
+  {
+    "id": "uniqwo5",
+    "name": "WO-0001",
+    "status": "Open",
+    "type": "Installation",
+    "date": {
+      "start": "Sat April 21 2017 10:00:00 GMT+0300 (IDT)",
+      "end": "Sat April 23 2017 12:40:46 GMT+0300 (IDT)"
+    },
+    "color": "black",
+    "description": {
+      "customer": {
+        "name": "Magna",
+        "address": "Meijendel 26, 1941 Beverwijk"
+      },
+      "installation": "Suntech 245Wp - 2151",
+      "contract": "Full Service 24/7",
+      "message": "Solar panel doesn't work.",
+      "internal_comment": "Check again if the stretching line is in place."
+    }
+  },
+  {
+    "id": "uniqwo6",
+    "name": "WO-0001",
+    "status": "In Progress",
+    "type": "Installation",
+    "date": {
+      "start": "Sat March 01 2017 15:35:46 GMT+0300 (IDT)",
+      "end": "Sat March 01 2017 15:40:46 GMT+0300 (IDT)"
+    },
+    "color": "green",
+    "description": {
+      "customer": {
+        "name": "Magna",
+        "address": "Meijendel 26, 1941 Beverwijk"
+      },
+      "installation": "Suntech 245Wp - 2151",
+      "contract": "Full Service 24/7",
+      "message": "Solar panel doesn't work.",
+      "internal_comment": "Check again if the stretching line is in place."
+    }
+  },
+  {
+    "id": "uniqwo7",
+    "name": "WO-0001",
+    "status": "Closed",
+    "type": "Failure",
+    "date": {
+      "start": "Sat September 11 2017 13:35:46 GMT+0300 (IDT)",
+      "end": "Sat September 11 2017 20:40:46 GMT+0300 (IDT)"
     },
     "color": "red",
-    "description": "Fix something that does not work"
+    "description": {
+      "customer": {
+        "name": "Casper",
+        "address": "Meijendel 26, 1941 Beverwijk"
+      },
+      "installation": "Suntech 245Wp - 2151",
+      "contract": "Full Service 24/7",
+      "message": "Solar panel doesn't work.",
+      "internal_comment": "Check again if the stretching line is in place."
+    }
+  },
+  {
+    "id": "uniqwo8",
+    "name": "WO-0001",
+    "status": "Open",
+    "type": "Maintenance",
+    "date": {
+      "start": "Sat October 06 2017 15:35:46 GMT+0300 (IDT)",
+      "end": "Sat October 06 2017 15:40:46 GMT+0300 (IDT)"
+    },
+    "color": "blue",
+    "description": {
+      "customer": {
+        "name": "Liav",
+        "address": "Meijendel 26, 1941 Beverwijk"
+      },
+      "installation": "Suntech 245Wp - 2151",
+      "contract": "Full Service 24/7",
+      "message": "Solar panel doesn't work.",
+      "internal_comment": "Check again if the stretching line is in place."
+    }
   }
 ]

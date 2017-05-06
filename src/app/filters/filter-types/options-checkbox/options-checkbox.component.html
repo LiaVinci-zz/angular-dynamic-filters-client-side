@@ -1,6 +1,7 @@
-<h3 class="first">{{ filter.name }}</h3>
+<header class="filter-header">{{ filter.name }}</header>
 <div class="ui-g">
   <div class="ui-g-12" *ngFor="let item of filter.options.items">
-    <p-checkbox name="checkboxItem" value="{{ item.value }}" label="{{ item.name }}" [(ngModel)]="filter.value" (onChange)="onChange()"></p-checkbox>
+    <p-checkbox name="checkboxItem" class="filter-header" value="{{ item.value }}" label="{{ item.name }}" [(ngModel)]="filter.value" (onChange)="onChange()"></p-checkbox>
   </div>
 </div>
+<button type="text" pButton class="clear-button" label="Clear" (click)="clearFilter()"></button>

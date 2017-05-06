@@ -20,4 +20,9 @@ export class OptionsCheckboxComponent implements OnInit {
   onChange() {
     this.filtersService.applyFilter(this.filter.identifier, {value: this.filter.value, renderType: this.filter.renderType});
   }
+
+  clearFilter() {
+    this.filter.value = [];
+    this.filtersService.applyFilter(this.filter.identifier, {value: this.filter.value, renderType: this.filter.renderType});
+  }
 }

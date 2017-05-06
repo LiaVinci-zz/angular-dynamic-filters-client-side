@@ -15,9 +15,9 @@
     "renderType": "options-checkbox",
     "options": {
       "items": [
-        { "name": "Open", "value": "open" },
-        { "name": "In progress", "value": "inprogress" },
-        { "name": "Closed", "value": "closed" }
+        { "name": "Open", "value": "Open" },
+        { "name": "In Progress", "value": "In Progress" },
+        { "name": "Closed", "value": "Closed" }
       ]
     }
   },
@@ -41,9 +41,9 @@
     "renderType": "options-radio",
     "options": {
       "items": [
-        { "name": "Installation", "value": "installation" },
-        { "name": "Maintenance", "value": "maintenance" },
-        { "name": "Failure", "value": "failure" }
+        { "name": "Installation", "value": "Installation" },
+        { "name": "Maintenance", "value": "Maintenance" },
+        { "name": "Failure", "value": "Failure" }
       ]
     }
   },

@@ -1,9 +1,16 @@
-<h3 class="first">{{ filter.name }}</h3>
 <div class="ui-g">
-  <div class="ui-g-12">
-    <p-calendar [(ngModel)]="filter.value.start" [showIcon]="true" [showTime]="true" (onSelect)="onChange()"></p-calendar>
-  </div>
-  <div class="ui-g-12">
-    <p-calendar [(ngModel)]="filter.value.end" [showIcon]="true" [showTime]="true" (onSelect)="onChange()"></p-calendar>
+  <header class="filter-header">{{ filter.name }}</header>
+</div>
+<div class="ui-g">
+  <div class="ui-g-6">
+    <label class="filter-header ui-g-2">Start:</label>
+    <p-calendar class="calendar" [(ngModel)]="filter.value.start" [showIcon]="true" [showTime]="true" (onSelect)="onChange()"></p-calendar>
   </div>
 </div>
+<div class="ui-g">
+  <div class="ui-g-6">
+    <label class="filter-header ui-g-2">End:</label>
+    <p-calendar class="calendar" [(ngModel)]="filter.value.end" [showIcon]="true" [showTime]="true" (onSelect)="onChange()"></p-calendar>
+  </div>
+</div>
+<button type="text" pButton class="clear-button" label="Clear" (click)="clearFilter()"></button>

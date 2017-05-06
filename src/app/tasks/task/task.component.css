@@ -1,0 +1,63 @@
+.wrapper {
+  margin-top: 20px;
+  max-width: 800px;
+}
+
+.table {
+  width: 100%;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+  display: table;
+  min-height: 80px;
+}
+
+.row {
+  display: table-row;
+  background: #f6f6f6;
+  padding: 10px;
+}
+
+.row.header {
+  font-weight: 500;
+  font-size: 15px;
+  color: #ffffff;
+  height: 25px;
+}
+
+.row.purple {
+  background: #cc63f9;
+}
+
+.row.black {
+  background: #606060;
+}
+
+.row.red {
+  background: #ea6153;
+}
+
+.row.green {
+  background: #27ae60;
+}
+
+.row.blue {
+  background: #2980b9;
+}
+
+.cell {
+  padding: 4px;
+  width: 25%;
+  display: table-cell;
+}
+
+.small-header {
+  font-size: 14px;
+  letter-spacing: -0.3px;
+  font-weight: 400;
+  color: #606060;
+}
+
+.following-text {
+  font-size: 14px;
+  font-weight: 300;
+  color: #606060;
+}

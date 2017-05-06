@@ -1,6 +1,7 @@
-<h3 class="first">{{ filter.name }}</h3>
+<header class="filter-header">{{ filter.name }}</header>
 <div class="ui-g">
   <div class="ui-g-12" *ngFor="let item of filter.options.items">
-    <p-radioButton name="selectboxItem" value="{{ item.value }}" label="{{ item.name }}" [(ngModel)]="filter.value" (ngModelChange)="onChange()"></p-radioButton>
+    <p-radioButton name="selectboxItem" class="filter-header" value="{{ item.value }}" label="{{ item.name }}" [(ngModel)]="filter.value" (ngModelChange)="onChange()"></p-radioButton>
   </div>
 </div>
+<button type="text" pButton class="clear-button" label="Clear" (click)="clearFilter()"></button>

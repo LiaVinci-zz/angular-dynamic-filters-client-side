@@ -18,4 +18,9 @@ export class StringComponent implements OnInit {
   onChange() {
     this.filtersService.applyFilter(this.filter.identifier, {value: this.filter.value, renderType: this.filter.renderType});
   }
+
+  clearFilter() {
+    this.filter.value = '';
+    this.filtersService.applyFilter(this.filter.identifier, {renderType: this.filter.renderType, value: this.filter.value});
+  }
 }

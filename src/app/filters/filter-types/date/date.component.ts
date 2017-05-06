@@ -20,4 +20,9 @@ export class DateComponent implements OnInit {
   onChange() {
     this.filtersService.applyFilter(this.filter.identifier, {renderType: this.filter.renderType, value:{start: this.filter.value.start, end: this.filter.value.end}});
   }
+
+  clearFilter() {
+    this.filter.value = {};
+    this.filtersService.applyFilter(this.filter.identifier, {renderType: this.filter.renderType, value: {}});
+  }
 }

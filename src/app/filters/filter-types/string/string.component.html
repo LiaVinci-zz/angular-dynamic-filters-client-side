@@ -1,5 +1,3 @@
-<p>
-  {{ filter.name }}:
-  <br/>
-  <input type="text" pInputText [(ngModel)]="filter.value" (ngModelChange)="onChange()"/>
-</p>
+<header class="filter-header">{{ filter.name }}</header>
+<input type="text" pInputText [(ngModel)]="filter.value" (ngModelChange)="onChange()"/>
+<button type="text" pButton class="clear-button" label="Clear" (click)="clearFilter()"></button>

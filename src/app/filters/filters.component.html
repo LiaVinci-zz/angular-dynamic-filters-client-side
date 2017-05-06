@@ -1,5 +1,5 @@
-<button type="text" pButton label="{{ filter.name }}" (click)="toggleFilterOverlay(filterOverlay, $event, filter)" *ngFor="let filter of filters"></button>
+<button type="text" pButton class="filter-button" label="{{ filter.name }}" (click)="toggleFilterOverlay(filterOverlay, $event, filter)" *ngFor="let filter of filters"></button>
 
 <p-overlayPanel #filterOverlay>
-  <div #filterComponent></div>
+  <div class="filter-overlay" #filterComponent></div>
 </p-overlayPanel>

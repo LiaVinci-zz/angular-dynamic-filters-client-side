@@ -15,7 +15,7 @@ import { FiltersService } from './filters/filters.service';
 import { TasksService } from "./tasks/tasks.service";
 
 // Pipes
-import { MyFilterPipe } from './tasks/myfilter.pipe';
+import { MyFilterPipe } from './tasks/tasks.pipe';
 
 // Components
 import { AppComponent } from './app.component';

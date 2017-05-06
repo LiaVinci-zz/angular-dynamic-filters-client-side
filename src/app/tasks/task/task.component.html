@@ -1,18 +1,45 @@
-<hr />
-{{ task.id }}
-<br />
-{{ task.name }}
-<br />
-{{ task.status }}
-<br />
-{{ task.type }}
-<br />
-{{ task.date.start }}
-<br />
-{{ task.date.end }}
-<br />
-{{ task.color }}
-<br />
-{{ task.description }}
-<br />
-<hr />
+<div class="wrapper">
+  <div class="table">
+    <div class="row header {{ task.color }}">
+      <div class="cell">
+        {{ task.date.start | date: 'shortTime' }} - {{ task.date.end | date: 'shortTime' }}
+      </div>
+      <div class="cell">
+        {{ task.name }}
+      </div>
+      <div class="cell">
+        {{ task.type }}
+      </div>
+      <div class="cell">
+        Status: {{ task.status }}
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="cell">
+        <header class="small-header">Customer</header>
+        <div class="following-text">{{ task.description.customer.name }}</div>
+        <div class="following-text">{{ task.description.customer.address }}</div>
+      </div>
+      <div class="cell">
+        <header class="small-header">Installation</header>
+        <div class="following-text">{{ task.description.installation }}</div>
+        <header class="small-header">Contract</header>
+        <div class="following-text">{{ task.description.contract }}</div>
+      </div>
+      <div class="cell">
+        <header class="small-header">Message</header>
+        <div class="following-text">{{ task.description.message }}</div>
+        <header class="small-header">Internal Comment</header>
+        <div class="following-text">{{ task.description.internal_comment }}</div>
+      </div>
+      <div class="cell">
+        <header class="small-header">Between</header>
+        <div class="following-text">
+          {{ task.date.start | date: 'short' }} - {{ task.date.end | date: 'short' }}
+        </div>
+      </div>
+    </div>
+
+  </div> <!-- div.table -->
+</div> <!-- Wrapper -->
