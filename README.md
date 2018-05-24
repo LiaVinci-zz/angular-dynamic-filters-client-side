@@ -1,6 +1,11 @@
-# DynamicFilterClientSide
+# Dynamic Filters Client Side
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.0.2.
+
+This project is as the name refers, dynamic filters on the client side,
+When you run the http server the service will make a call to retrive a JSON file with filters configuration as well as a product file which contains array of json objects, by changing the type of the filters the service will pick it up and render the new filter.
+
+This project was done as an interview exercise by me about a year ago (around the begining of April 2017), hope you will find it usefull, for any questions, feel free to contact me :-) 
 
 ## Development server
 
