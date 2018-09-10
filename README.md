@@ -1,33 +1,47 @@
-# Dynamic Filters Client Side
-
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.0.2.
 
-This project is as the name refers, dynamic filters on the client side,
-When you run the http server the service will make a call to retrive a JSON file with filters configuration as well as a product file which contains array of json objects, by changing the type of the filters the service will pick it up and render the new filter.
+# :zap:  Angular Dynamic Filters Client Side | LiaVinci  :zap:
 
-This project was done as an interview exercise by me about a year ago (around the begining of April 2017), hope you will find it usefull, for any questions, feel free to contact me :-) 
+This project was built with [Angular](https://github.com/angular/angular-cli) version 1.0.2,
+When you start the project an http call will be fired to get a JSON file with the filter configurations, based on the filter type when a user will make use of this filter a callback function will be fired.
 
-## Development server
+In this project we will be filtering tasks thus we will also make an http call to get those tasks.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+### :green_book: :blue_book: Filter Types :orange_book: :notebook:
 
-## Code scaffolding
+* date
+* options-checkbox
+* optiona-radio
+* string
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|module`.
+### :pencil2: Define a filter :pencil2:
 
-## Build
+```sh
+{
+  "name": "Name", <---- Filter name to be displayed
+  "identifier": "name", <---- Filter name
+  "renderType": "string", <---- Define the render that will be displayed to the user as well as the logic that will be used to                                 filter the results
+  "options": { <---- Extra configuration for the filter, can be empty, include validation, items etc... for more you can look                      at the mock-data/filters,json
+    "validation": {
+      "maxlength": 255
+    }
+  }
+}
+```
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `-prod` flag for a production build.
+## :boom: Running & Testing :boom:
 
-## Running unit tests
+### First please make sure to install the app dependencies, to do so please follow the next steps:
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+- Install [npm](https://www.npmjs.com/) to make sure it's installed you can run `npm -v`
+- Install [NodeJS](https://nodejs.org/en/download/package-manager/) to make sure it's installed you can run `node -v`
+- Clone the repository
+- Install dependencies: `npm install`
 
-## Running end-to-end tests
+### To run the app :rocket:
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-Before running the tests make sure you are serving the app via `ng serve`.
+* `npm run start`
 
-## Further help
+### To test the app :clipboard:
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+* `npm run test`
